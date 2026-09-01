@@ -1,0 +1,97 @@
+:root {
+  --bg: #d8dbe1;
+  --surface: #ffffff;
+  --text: #111111;
+  --text-muted: #6b6b6b;
+  --text-light: #8a8a8a;
+  --border: #e8e8e8;
+  --accent: #ff5e00;
+  --accent-hover: #e65500;
+  --radius: 24px;
+  --radius-sm: 16px;
+  --radius-xs: 12px;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+
+  --sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  font: 16px/150% var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scroll reveal animations */
+[data-reveal] {
+  opacity: 0;
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal].reveal-up {
+  transform: translateY(30px);
+}
+
+[data-reveal].reveal-left {
+  transform: translateX(-30px);
+}
+
+[data-reveal].reveal-right {
+  transform: translateX(30px);
+}
+
+[data-reveal].reveal-scale {
+  transform: scale(0.96);
+}
+
+[data-reveal].reveal-fade {
+  transform: none;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

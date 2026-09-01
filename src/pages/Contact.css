@@ -1,0 +1,143 @@
+.contact {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.contact__intro {
+  text-align: center;
+  color: var(--text-muted);
+  margin: 0 0 40px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact__field input,
+.contact__field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+  color: var(--text-light);
+}
+
+.contact__field textarea {
+  resize: vertical;
+}
+
+.contact__submit {
+  align-self: flex-start;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--accent);
+  transition: background 0.2s ease;
+}
+
+.contact__submit:hover {
+  background: var(--accent-hover);
+}
+
+.contact__status {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.contact__direct {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.contact__direct .contact__label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+}
+
+.contact__value {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.contact__value:hover {
+  color: var(--accent);
+}
+
+.home-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  .home-footer {
+    padding-top: 56px;
+  }
+
+  .contact__direct {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact__title {
+    font-size: 32px;
+  }
+
+  .contact__row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__submit {
+    align-self: stretch;
+  }
+}
