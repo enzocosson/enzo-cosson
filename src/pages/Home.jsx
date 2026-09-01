@@ -13,7 +13,7 @@ export default function Home() {
         <Reveal as="div" delay={0}>
           <Link to="/contact" className="home-hero__availability">
             <span className="home-hero__pulse" aria-hidden="true" />
-            En recherche de CDI front-end / fullstack
+            En recherche de CDI fullstack
           </Link>
         </Reveal>
         <Reveal as="h1" className="home-hero__title" delay={80}>
