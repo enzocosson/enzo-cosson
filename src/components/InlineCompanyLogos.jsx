@@ -13,13 +13,14 @@ export default function InlineCompanyLogos({ text, className = '' }) {
       {parts.map((part, index) => {
         const logo = LOGOS[part]
         if (logo) {
+          const isFdj = part === 'FDJ UNITED'
           return (
             <span key={index} className="inline-logo">
               {part}
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="inline-logo__img"
+                className={`inline-logo__img ${isFdj ? 'inline-logo__img--fdj' : ''}`}
                 loading="lazy"
               />
             </span>
