@@ -29,7 +29,7 @@
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: #f6f6f6;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   margin-bottom: 24px;
 }
 
@@ -306,7 +306,7 @@
   }
 
   .about__photo {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1 / 1;
   }
 
   .services__list {

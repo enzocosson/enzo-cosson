@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Reveal from '../components/Reveal'
 import SocialLinks from '../components/SocialLinks'
 import ToolIcon from '../components/ToolIcon'
+import InlineCompanyLogos from '../components/InlineCompanyLogos'
 import { profile, projects, tools, experiences } from '../data'
 import './Home.css'
 
@@ -13,7 +14,7 @@ export default function Home() {
         <Reveal as="div" delay={0}>
           <Link to="/contact" className="home-hero__availability">
             <span className="home-hero__pulse" aria-hidden="true" />
-            En recherche de CDI fullstack
+            En recherche de CDI fullstack / Front-End
           </Link>
         </Reveal>
         <Reveal as="h1" className="home-hero__title" delay={80}>
@@ -22,7 +23,7 @@ export default function Home() {
           & créateur de SaaS
         </Reveal>
         <Reveal as="p" className="home-hero__intro" delay={160}>
-          {profile.intro}
+          <InlineCompanyLogos text={profile.intro} />
         </Reveal>
         <Reveal as="div" delay={240}>
           <SocialLinks />

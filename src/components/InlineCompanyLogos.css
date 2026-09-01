@@ -1,0 +1,14 @@
+.inline-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.inline-logo__img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 2px;
+  vertical-align: middle;
+}

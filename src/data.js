@@ -2,15 +2,15 @@ export const avatar = "/images/photo-de-profile.PNG";
 
 export const profile = {
   name: "Enzo Cosson",
-  role: "Développeur fullstack chez FDJ UNITED & CAPGEMINI, créateur de SaaS",
+  role: "Développeur fullstack, créateur de SaaS",
   location: "Paris et périphérie",
   email: "enzolemercier@gmail.com",
   phone: "+33 6 51 84 58 69",
-  status: "Développeur fullstack — FDJ UNITED & CAPGEMINI",
+  status: "Développeur fullstack — en recherche de CDI",
   intro:
-    "Développeur Fullstack chez FDJ UNITED et CAPGEMINI et créateur de DeepEdge, un SaaS analytics pour options traders. Je conçois des interfaces web performantes avec React et collabore sur des projets à fort trafic.",
+    "Développeur fullstack fraîchement diplômé d'un Master en développement full stack, avec 4 ans d'alternance consécutifs dont les 2 dernières années chez Capgemini en mission chez FDJ UNITED. À côté, je crée des applications web en autonomie, notamment DeepEdge, un SaaS analytics pour options traders ultra complet comptant plus de 900 utilisateurs inscrits : frontend React, backend Node.js/Express et Python, gestion de paiement Stripe, WebSockets temps réel, base de données NoSQL/SQL et déploiement sur VPS cloud.",
   about:
-    "Développeur Fullstack chez FDJ UNITED et CAPGEMINI et créateur de DeepEdge, un SaaS analytics pour options traders. Je conçois des applications web performantes et scalables : React/Redux en frontend, Node.js/Express et Python en backend, bases de données NoSQL/SQL, WebSockets temps réel, paiements Stripe et déploiement cloud. Mon SaaS, DeepEdge, compte plus de 600 utilisateurs et près de 60 000 lignes de code. Passionné par le design, la data viz et la performance, je cherche à contribuer sur des projets complexes et ambitieux.",
+    "Développeur fullstack fraîchement diplômé d'un Master en développement full stack, avec 4 ans d'alternance consécutifs dont les 2 dernières années chez Capgemini en mission chez FDJ UNITED. En parallèle, je crée des applications web en autonomie, notamment DeepEdge, un SaaS analytics pour options traders ultra complet : frontend React/Redux, backend Node.js/Express et Python, gestion de paiement Stripe, WebSockets temps réel, base de données NoSQL/SQL et déploiement sur VPS cloud. Mon SaaS compte plus de 900 utilisateurs inscrits et près de 60 000 lignes de code. Passionné par le design, la data viz et la performance, je cherche à contribuer sur des projets complexes et ambitieux.",
 };
 
 export const projects = [
@@ -20,7 +20,7 @@ export const projects = [
     tags: "SaaS Fullstack, Trading d'option",
     year: "2025",
     description:
-      "Terminal de trading SaaS développé de A à Z : landing, authentification, abonnements Stripe, visualisation avancée des données options, journal de trading et connecteurs vers des outils tiers. Plus de 600 utilisateurs et près de 60 000 lignes de code.",
+      "Terminal de trading SaaS développé de A à Z : landing, authentification, abonnements Stripe, visualisation avancée des données options, journal de trading et connecteurs vers des outils tiers. Plus de 900 utilisateurs inscrits et près de 60 000 lignes de code.",
     technologies: [
       "React 19",
       "Node.js",
@@ -37,11 +37,11 @@ export const projects = [
   },
   {
     id: "fdj-united",
-    title: "FDJ UNITED",
+    title: "FDJ UNITED — Capgemini",
     tags: "Fullstack, React",
-    year: "2026",
+    year: "2024 - 2026",
     description:
-      "Développement fullstack de l'interface « Compte Joueur » de la FDJ en React.js : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et contributions back-end au sein d'une équipe agile.",
+      "Contrat d'apprentissage chez Capgemini en mission chez FDJ UNITED, dans le cadre de mon Master Développement Full Stack (diplôme obtenu). Développement de l'interface « Compte Joueur » de la FDJ en React.js : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et contributions back-end au sein d'une équipe agile.",
     technologies: ["React.js", "Redux", "Figma", "Directus", "GitLab", "Jira"],
     image: "/images/fdj-website.png",
   },
@@ -189,19 +189,18 @@ export const tools = [
 
 export const experiences = [
   {
-    id: "fdj",
-    role: "Développeur fullstack",
-    company: "FDJ UNITED",
-    contract: "CDI",
+    id: "fdj-capgemini",
+    role: "Développeur fullstack en alternance",
+    company: "Capgemini — Mission FDJ UNITED",
+    contract: "Apprentissage Master Développement Full Stack",
     location: "Ville de Paris",
     type: "Sur site",
-    startDate: "2026-01",
-    endDate: null,
+    startDate: "2024-09",
+    endDate: "2026-08",
     description:
-      "Contribution au développement fullstack de l'interface « Compte Joueur » de la FDJ en React.js : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et évolutions back-end. Collaboration avec les développeurs, Product Owners et QA via un stack moderne incluant React, Redux, Figma, Directus CMS, GitLab et Jira.",
-    skills: ["React.js", "Redux", "Figma", "Directus", "GitLab", "Jira"],
-    image: "/images/fdj.png",
-    link: "https://www.fdj.fr/",
+      "Contrat d'apprentissage chez Capgemini en mission chez FDJ UNITED, dans le cadre de ma formation Master Développement Full Stack (diplôme obtenu). Contribution au développement de l'interface « Compte Joueur » de la FDJ en React.js : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et évolutions back-end. Collaboration avec les développeurs, Product Owners et QA via un stack moderne incluant React, Redux, Figma, Directus CMS, GitLab et Jira.",
+    skills: ["React.js", "Redux", "Node.js", "Figma", "Directus", "GitLab", "Jira"],
+    image: "/images/capgemini.png",
   },
   {
     id: "deepedge",
@@ -210,7 +209,7 @@ export const experiences = [
     contract: "Indépendant",
     location: "France",
     type: "Sur site",
-    startDate: "2026-01",
+    startDate: "2024-09",
     endDate: null,
     description:
       "SaaS analytics terminal for active options traders on indices and futures. GEX Levels, Multi-Greek analysis, Live Signals, Market Terminal, Chart Live, Options Chain, heatmaps, 3D IV Smile Surface et extension Chrome pour TradingView.",
@@ -226,20 +225,6 @@ export const experiences = [
     ],
     image: "/images/deepedge.png",
     link: "https://deepedge.fr",
-  },
-  {
-    id: "capgemini",
-    role: "Développeur FullStack",
-    company: "Capgemini",
-    contract: "Contrat en alternance",
-    location: "Ville de Paris",
-    type: "Sur site",
-    startDate: "2024-09",
-    endDate: null,
-    description:
-      "Conception, développement et optimisation d'interfaces web jusqu'à la mise en production. Mise en place du continuous delivery, participation aux développements back, sensibilité front avec React, Node, JavaScript et Angular. Travail en équipe Agile au sein de la communauté Software Engineers.",
-    skills: ["React", "Node.js", "JavaScript", "Angular", "Docker"],
-    image: "/images/capgemini.png",
   },
   {
     id: "drugoptimal",

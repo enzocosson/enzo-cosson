@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import Reveal from '../components/Reveal'
 import SocialLinks from '../components/SocialLinks'
 import ToolIcon from '../components/ToolIcon'
+import InlineCompanyLogos from '../components/InlineCompanyLogos'
 import { avatar, profile, services, tools, experiences, education } from '../data'
 import './About.css'
 
@@ -16,7 +17,7 @@ function formatDateRange(startDate, endDate) {
 }
 
 const companyLogos = {
-  fdj: { bg: '#0027FF', text: 'FDJ', initial: 'F' },
+  'fdj-capgemini': { bg: '#0070AD', text: 'Capgemini × FDJ', initial: 'C' },
   capgemini: { bg: '#0070AD', text: 'Capgemini', initial: 'C' },
   drugoptimal: { bg: '#00B4D8', text: 'DrugOptimal', initial: 'D' },
 }
@@ -44,7 +45,9 @@ export default function About() {
 
         <div className="about__intro">
           <Reveal as="div" className="about__text">
-            <p>{profile.about}</p>
+            <p>
+              <InlineCompanyLogos text={profile.about} />
+            </p>
           </Reveal>
 
           <Reveal as="div" className="about__profile" animation="scale">
