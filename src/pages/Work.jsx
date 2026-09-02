@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Layout from '../components/Layout'
 import Reveal from '../components/Reveal'
 import Footer from '../components/Footer'
+import HighlightText from '../components/HighlightText'
 import { projects } from '../data'
 import './Work.css'
 
@@ -35,7 +36,9 @@ export default function Work() {
                   <p className="work-card__tags">
                     {project.tags} — {project.year}
                   </p>
-                  <p className="work-card__desc">{project.description}</p>
+                  <p className="work-card__desc">
+                    <HighlightText text={project.description} />
+                  </p>
                 </div>
               </Reveal>
             </Link>

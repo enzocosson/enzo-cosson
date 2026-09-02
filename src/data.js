@@ -46,6 +46,17 @@ export const projects = [
     image: "/images/fdj-website.png",
   },
   {
+    id: "the-hidden-society",
+    title: "The Hidden Society",
+    tags: "Creative Development, Landing Page",
+    year: "2024",
+    description:
+      "Landing page immersive à fort caractère visuel, conçue pour promouvoir des services autour du trading. Expérience en creative development : transitions marquantes, typographies affirmées et animations travaillées pour capter l'attention et guider vers la formation aux concepts de trading.",
+    technologies: ["React.js", "GSAP", "Three.js", "Sass"],
+    link: "https://thehiddensociety.vercel.app/",
+    image: "/images/creations/the-hidden-society/ths.png",
+  },
+  {
     id: "drugoptimal",
     title: "DrugOptimal",
     tags: "Front End, IA, e-santé",

@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import Reveal from '../components/Reveal'
 import SocialLinks from '../components/SocialLinks'
 import ToolIcon from '../components/ToolIcon'
-import InlineCompanyLogos from '../components/InlineCompanyLogos'
+import HighlightText from '../components/HighlightText'
 import { avatar, profile, services, tools, experiences, education } from '../data'
 import './About.css'
 
@@ -45,9 +45,7 @@ export default function About() {
 
         <div className="about__intro">
           <Reveal as="div" className="about__text">
-            <p>
-              <InlineCompanyLogos text={profile.about} />
-            </p>
+            <p><HighlightText text={profile.about} /></p>
           </Reveal>
 
           <Reveal as="div" className="about__profile" animation="scale">
@@ -105,7 +103,7 @@ export default function About() {
                 <div className="timeline__content">
                   <h3 className="timeline__role">{exp.role}</h3>
                   <p className="timeline__company">
-                    {exp.company}
+                    <strong>{exp.company}</strong>
                     {exp.contract && ` · ${exp.contract}`}
                   </p>
                   <p className="timeline__meta">
@@ -119,7 +117,9 @@ export default function About() {
                       {exp.type && ` · ${exp.type}`}
                     </p>
                   )}
-                  <p className="timeline__desc">{exp.description}</p>
+                  <p className="timeline__desc">
+                    <HighlightText text={exp.description} />
+                  </p>
                   {exp.link && (
                     <a
                       href={exp.link}
