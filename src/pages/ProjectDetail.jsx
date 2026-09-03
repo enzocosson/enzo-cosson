@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import Layout from '../components/Layout'
 import Reveal from '../components/Reveal'
+import HighlightText from '../components/HighlightText'
 import { projects, profile } from '../data'
 import './ProjectDetail.css'
 
@@ -37,7 +38,7 @@ export default function ProjectDetail() {
         <div className="project-detail__body">
           <Reveal as="div" className="project-detail__description">
             <h2 className="project-detail__section-title">Overview</h2>
-            <p>{project.description}</p>
+            <p><HighlightText text={project.description} /></p>
           </Reveal>
 
           <Reveal as="div" className="project-detail__technologies" delay={80}>

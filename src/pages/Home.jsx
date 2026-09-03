@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import Reveal from '../components/Reveal'
 import SocialLinks from '../components/SocialLinks'
 import ToolIcon from '../components/ToolIcon'
-import InlineCompanyLogos from '../components/InlineCompanyLogos'
+import HighlightText from '../components/HighlightText'
 import { profile, projects, tools, experiences } from '../data'
 import './Home.css'
 
@@ -23,7 +23,7 @@ export default function Home() {
           & créateur de SaaS
         </Reveal>
         <Reveal as="p" className="home-hero__intro" delay={160}>
-          <InlineCompanyLogos text={profile.intro} />
+          <HighlightText text={profile.intro} />
         </Reveal>
         <Reveal as="div" delay={240}>
           <SocialLinks />
@@ -73,7 +73,9 @@ export default function Home() {
               delay={index * 80}
             >
               <p className="experience__role">{exp.role}</p>
-              <p className="experience__desc">{exp.description}</p>
+              <p className="experience__desc">
+                <HighlightText text={exp.description} />
+              </p>
             </Reveal>
           ))}
         </div>
