@@ -17,8 +17,8 @@ function formatDateRange(startDate, endDate) {
 }
 
 const companyLogos = {
-  'fdj-capgemini': { bg: '#0070AD', text: 'Capgemini × FDJ', initial: 'C' },
   capgemini: { bg: '#0070AD', text: 'Capgemini', initial: 'C' },
+  'fdj-united-exp': { bg: '#E2017B', text: 'FDJ UNITED', initial: 'F' },
   drugoptimal: { bg: '#00B4D8', text: 'DrugOptimal', initial: 'D' },
 }
 
@@ -158,7 +158,16 @@ export default function About() {
                 delay={index * 80}
               >
                 <div className="timeline__marker">
-                  <span className="timeline__dot" />
+                  {edu.image ? (
+                    <img
+                      src={edu.image}
+                      alt={edu.school}
+                      className="timeline__logo"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="timeline__dot" />
+                  )}
                 </div>
                 <div className="timeline__content">
                   <h3 className="timeline__role">{edu.degree}</h3>

@@ -18,6 +18,8 @@ export const projects = [
     id: "deepedge",
     title: "DeepEdge",
     tags: "SaaS Fullstack, Trading d'option",
+    theme: "Finance / Trading",
+    themeColor: "#ff5e00",
     year: "2025",
     description:
       "Terminal de trading SaaS développé de A à Z : landing, authentification, abonnements Stripe, visualisation avancée des données options, journal de trading et connecteurs vers des outils tiers. Plus de 900 utilisateurs inscrits et près de 60 000 lignes de code.",
@@ -34,32 +36,64 @@ export const projects = [
     ],
     link: "https://deepedge.fr",
     image: "/images/creations/deepedge-couverture.png",
+    featured: true,
+    size: "large",
   },
   {
     id: "fdj-united",
     title: "FDJ UNITED — Capgemini",
     tags: "Fullstack, React",
+    theme: "Corporate / Jeux",
+    themeColor: "#0070AD",
     year: "2024 - 2026",
     description:
       "Contrat d'apprentissage chez Capgemini en mission chez FDJ UNITED, dans le cadre de mon Master Développement Full Stack (diplôme obtenu). Développement de l'interface « Compte Joueur » de la FDJ en React.js : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et contributions back-end au sein d'une équipe agile.",
     technologies: ["React.js", "Redux", "Figma", "Directus", "GitLab", "Jira"],
     image: "/images/fdj-website.png",
+    featured: true,
+    size: "medium",
+  },
+  {
+    id: "tradify",
+    title: "Tradify",
+    tags: "SaaS Fullstack, Trading",
+    theme: "Finance / Trading",
+    themeColor: "#10b981",
+    year: "2025",
+    description:
+      "Plateforme de suivi et d'analyse de portefeuille pour traders. Dashboard interactif avec visualisation des performances, gestion des positions et données de marché en temps réel.",
+    technologies: [
+      "React 19",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "WebSocket",
+      "Tailwind",
+    ],
+    link: "https://tradify-phi.vercel.app/",
+    image: "/images/creations/Tradify/home.png",
   },
   {
     id: "the-hidden-society",
     title: "The Hidden Society",
     tags: "Creative Development, Landing Page",
+    theme: "Finance / Trading",
+    themeColor: "#ff5e00",
     year: "2024",
     description:
       "Landing page immersive à fort caractère visuel, conçue pour promouvoir des services autour du trading. Expérience en creative development : transitions marquantes, typographies affirmées et animations travaillées pour capter l'attention et guider vers la formation aux concepts de trading.",
     technologies: ["React.js", "GSAP", "Three.js", "Sass"],
     link: "https://thehiddensociety.vercel.app/",
     image: "/images/creations/the-hidden-society/ths.png",
+    featured: true,
+    size: "medium",
   },
   {
     id: "drugoptimal",
     title: "DrugOptimal",
     tags: "Front End, IA, e-santé",
+    theme: "Santé / e-santé",
+    themeColor: "#00B4D8",
     year: "2023",
     description:
       "Premier soutien de l'infirmier face à l'erreur médicamenteuse. Application React permettant de lutter contre les incompatibilités physico-chimiques et de fournir des recommandations d'utilisation des médicaments. Le produit intègre des modèles d'IA pour générer des possibilités d'administration et éviter les interactions dangereuses.",
@@ -70,12 +104,15 @@ export const projects = [
       "Tailwind CSS",
       "IA / LLM",
     ],
-    image: "/images/new-drugoptimal-website.png",
+    image: "/images/creations/drugoptimal-website.png",
+    link: "https://www.drugoptimal.com/",
   },
   {
     id: "cottages",
     title: "Les Cottages du Belvédère",
     tags: "Front End, 3D",
+    theme: "Immobilier / Tourisme",
+    themeColor: "#2E7D32",
     year: "2024",
     description:
       "Environnement 3D immersif et réaliste reproduisant le cadre du cottage du Belvédère. L'utilisateur peut cliquer sur les cottages pour obtenir des informations détaillées, explorer l'intérieur via des scans 3D et être redirigé vers le site de réservation.",
@@ -88,29 +125,14 @@ export const projects = [
       "gsap",
     ],
     image: "/images/creations/cottages.webp",
-  },
-  {
-    id: "typster",
-    title: "Typster",
-    tags: "Front End, Interactive",
-    year: "2023",
-    description:
-      "Application interactive pour améliorer la vitesse de frappe au clavier. Interface intuitive avec suivi des progrès, statistiques détaillées et classement en ligne.",
-    technologies: [
-      "React Js",
-      "Three Js",
-      "Sass",
-      "Blender",
-      "gsap",
-      "Voiceflow",
-      "Vercel",
-    ],
-    image: "/images/creations/typster.webp",
+    link: "https://cottage-interface.vercel.app/",
   },
   {
     id: "ferrari",
     title: "Ferrari",
     tags: "Front End, 3D",
+    theme: "Automobile / Luxe",
+    themeColor: "#D32F2F",
     year: "2024",
     description:
       "Vitrine interactive pour la marque Ferrari. Découverte des modèles dans un environnement 3D captivant avec animations dynamiques du modèle 3D pilotées par GSAP.",
@@ -123,33 +145,7 @@ export const projects = [
       "gsap",
     ],
     image: "/images/creations/ferrari.webp",
-  },
-  {
-    id: "flexbank",
-    title: "Flexbank",
-    tags: "Front End, Animation",
-    year: "2024",
-    description:
-      "Animation dynamique d'une carte bancaire au scroll en combinant GSAP et Three.js. React Three Fiber apporte des éléments 3D interactifs tandis que GSAP gère les transitions avec précision.",
-    technologies: [
-      "React Js",
-      "Three Js",
-      "React Three Fiber",
-      "Sass",
-      "Blender",
-      "gsap",
-    ],
-    image: "/images/creations/flexbank.webp",
-  },
-  {
-    id: "netflix",
-    title: "Netflix",
-    tags: "Front End & Back End",
-    year: "2024",
-    description:
-      "Reconstitution universitaire d'un site de streaming complet. Navigation dans une base de données de films, découverte de contenus et gestion des préférences de visionnage.",
-    technologies: ["Vue Js", "Symfony", "API Platform", "Sass", "Docker"],
-    image: "/images/creations/netflix.webp",
+    link: "https://ferrari-daytona-sp3-chi.vercel.app/",
   },
 ];
 
@@ -200,18 +196,32 @@ export const tools = [
 
 export const experiences = [
   {
-    id: "fdj-capgemini",
+    id: "capgemini",
     role: "Développeur fullstack en alternance",
-    company: "Capgemini — Mission FDJ UNITED",
+    company: "Capgemini",
     contract: "Apprentissage Master Développement Full Stack",
     location: "Ville de Paris",
     type: "Sur site",
     startDate: "2024-09",
     endDate: "2026-08",
     description:
-      "Contrat d'apprentissage chez Capgemini en mission chez FDJ UNITED, dans le cadre de ma formation Master Développement Full Stack (diplôme obtenu). Contribution au développement de l'interface « Compte Joueur » de la FDJ en React.js : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et évolutions back-end. Collaboration avec les développeurs, Product Owners et QA via un stack moderne incluant React, Redux, Figma, Directus CMS, GitLab et Jira.",
-    skills: ["React.js", "Redux", "Node.js", "Figma", "Directus", "GitLab", "Jira"],
-    image: "/images/capgemini.png",
+      "Contrat d'apprentissage chez Capgemini dans le cadre de mon Master Développement Full Stack (diplôme obtenu). Mission en régie chez FDJ UNITED en tant que développeur fullstack React.js au sein d'une équipe agile.",
+    skills: ["React.js", "Redux", "Node.js", "GitLab", "Jira"],
+    image: "/images/experience/capgemini.png",
+  },
+  {
+    id: "fdj-united-exp",
+    role: "Développeur fullstack React.js",
+    company: "FDJ UNITED — mission client",
+    contract: "Apprentissage via Capgemini",
+    location: "Ville de Paris",
+    type: "Sur site",
+    startDate: "2024-09",
+    endDate: "2026-08",
+    description:
+      "Mission client au sein de FDJ UNITED sur l'interface « Compte Joueur » : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et évolutions back-end. Collaboration avec les développeurs, Product Owners et QA via React, Redux, Figma, Directus CMS, GitLab et Jira.",
+    skills: ["React.js", "Redux", "Figma", "Directus", "GitLab", "Jira"],
+    image: "/images/experience/fdj.png",
   },
   {
     id: "deepedge",
@@ -234,7 +244,7 @@ export const experiences = [
       "Sass",
       "Directus",
     ],
-    image: "/images/deepedge.png",
+    image: "/images/experience/deepedge.png",
     link: "https://deepedge.fr",
   },
   {
@@ -248,8 +258,9 @@ export const experiences = [
     endDate: "2024-09",
     description:
       "Développement d'interfaces web et mobiles pour une solution e-santé, avec un fort focus sur l'expérience utilisateur et la performance.",
-    skills: ["React.js", "TypeScript", "Next.js", "Tailwind CSS"],
-    image: "/images/drugoptimal.png",
+    skills: ["React.js", "TypeScript", "SCSS", "IA / LLM / Python"],
+    image: "/images/experience/drugoptimal.png",
+    link: "https://www.drugoptimal.com/",
   },
 ];
 
@@ -260,13 +271,15 @@ export const education = [
     school: "IIM Digital School",
     startDate: "2024-03",
     endDate: "2026-08",
+    image: "/images/ecole/iim.png",
   },
   {
     id: "iut",
-    degree: "BUT, MMI",
+    degree: "BUT, MMI spécialité développement web",
     school: "IUT Troyes",
     startDate: "2021-09",
     endDate: "2024-07",
+    image: "/images/ecole/iut troyes.png",
   },
   {
     id: "lycee-jules",
@@ -275,17 +288,10 @@ export const education = [
     startDate: "2019-09",
     endDate: "2021-07",
   },
-  {
-    id: "lycee-sainte",
-    degree: "Brevet des collèges",
-    school: "Lycée Sainte-Thérèse Rambouillet",
-    startDate: "2017-09",
-    endDate: "2019-07",
-  },
 ];
 
 export const socialLinks = {
   linkedin: "https://www.linkedin.com/in/enzo-cosson/",
-  github: "https://github.com/zeno-nq",
+  github: "https://github.com/enzocosson",
   instagram: "https://www.instagram.com/enzo_cosson/",
 };

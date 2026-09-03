@@ -6,7 +6,10 @@
       "Bash(sort -t: -k1 -k2)",
       "Bash(grep -v \"--surface\\\\|--text:\")",
       "Bash(grep -v \"--surface\\\\|--text\")",
-      "Bash(: *)"
+      "Bash(: *)",
+      "Bash(identify /Users/enzocosson/Documents/trading/terminal/enzo-cosson/public/images/logo/logo-drugoptimal.png)",
+      "mcp__ide__executeCode",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

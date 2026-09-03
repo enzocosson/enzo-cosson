@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 120px 0 80px;
+  padding: 60px 0 80px;
 }
 
 .home-hero__availability {
@@ -64,7 +64,7 @@
   letter-spacing: -3.5px;
   font-weight: 500;
   color: var(--text);
-  margin: 0 0 28px;
+  margin: 0 0 16px;
 }
 
 .home-hero__intro {
@@ -82,53 +82,113 @@
 
 .home-work__header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 32px;
+  gap: 24px;
+}
+
+.home-work__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-work__eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .home-work__title {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 500;
   color: var(--text);
   margin: 0;
 }
 
 .home-work__link {
-  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text);
-  transition: color 0.2s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
 }
 
 .home-work__link:hover {
   color: var(--accent);
+  border-color: var(--accent);
+  background: var(--surface-raised);
 }
 
-.home-work__grid {
+.home-work__link span {
+  transition: transform 0.2s ease;
+}
+
+.home-work__link:hover span {
+  transform: translateX(4px);
+}
+
+.home-work__bento {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-rows: auto auto;
+  gap: 24px;
 }
 
 .home-work__card-link {
-  display: contents;
+  display: block;
   color: inherit;
   text-decoration: none;
 }
 
+.home-work__card-link--large {
+  grid-column: span 2;
+}
+
 .home-work__card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 0;
   cursor: pointer;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease,
+    border-color 0.2s ease;
+}
+
+.home-work__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: rgba(255, 94, 0, 0.25);
+}
+
+.home-work__card--large .home-work__image {
+  aspect-ratio: 16 / 7;
+  min-height: 320px;
+}
+
+.home-work__card--medium .home-work__image {
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
 }
 
 .home-work__image {
-  border-radius: 18px;
   overflow: hidden;
   background: var(--surface-raised);
-  aspect-ratio: 4 / 3;
 }
 
 .home-work__image img {
@@ -136,18 +196,65 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .home-work__card:hover .home-work__image img {
-  transform: scale(1.03);
+  transform: scale(1.04);
+}
+
+.home-work__badge,
+.home-work__theme {
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.home-work__badge {
+  left: 20px;
+  color: #fff;
+  background: var(--accent);
+}
+
+.home-work__theme {
+  right: 20px;
+}
+
+.home-work__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+}
+
+.home-work__card--large .home-work__caption {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home-work__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .home-work__name {
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   color: var(--text);
-  margin: 0 0 6px;
+  margin: 0;
+}
+
+.home-work__card--large .home-work__name {
+  font-size: 28px;
 }
 
 .home-work__tags {
@@ -156,9 +263,59 @@
   margin: 0;
 }
 
+.home-work__desc {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.home-work__techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.home-work__tech {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+}
+
+.home-work__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap 0.2s ease;
+}
+
+.home-work__cta span {
+  transition: transform 0.2s ease;
+}
+
+.home-work__card:hover .home-work__cta span {
+  transform: translateX(4px);
+}
+
+.home-work__card--large .home-work__cta {
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
 @media (max-width: 1024px) {
   .home-hero {
-    padding: 80px 0 100px;
+    padding: 40px 0 80px;
   }
 
   .home-hero__availability {
@@ -175,8 +332,29 @@
     font-size: 16px;
   }
 
-  .home-work__grid {
-    gap: 24px;
+  .home-work__header {
+    align-items: center;
+  }
+
+  .home-work__title {
+    font-size: 24px;
+  }
+
+  .home-work__bento {
+    gap: 20px;
+  }
+
+  .home-work__card--large .home-work__image {
+    min-height: 260px;
+  }
+
+  .home-work__card--large .home-work__caption {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home-work__desc {
+    max-width: none;
   }
 }
 
@@ -190,8 +368,44 @@
     letter-spacing: -1.2px;
   }
 
-  .home-work__grid {
+  .home-work__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .home-work__bento {
     grid-template-columns: 1fr;
-    gap: 32px;
+  }
+
+  .home-work__card-link--large {
+    grid-column: span 1;
+  }
+
+  .home-work__card--large .home-work__image,
+  .home-work__card--medium .home-work__image {
+    aspect-ratio: 4 / 3;
+    min-height: auto;
+  }
+
+  .home-work__caption {
+    padding: 20px;
+  }
+
+  .home-work__card--large .home-work__caption {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .home-work__name {
+    font-size: 18px;
+  }
+
+  .home-work__card--large .home-work__name {
+    font-size: 22px;
+  }
+
+  .home-work__desc {
+    font-size: 14px;
   }
 }

@@ -4,8 +4,13 @@ import Reveal from '../components/Reveal'
 import SocialLinks from '../components/SocialLinks'
 import ToolIcon from '../components/ToolIcon'
 import HighlightText from '../components/HighlightText'
+import LogoSlider from '../components/LogoSlider'
 import { profile, projects, tools, experiences } from '../data'
 import './Home.css'
+
+const featuredProjects = projects.filter((p) => p.featured)
+const mainProject = featuredProjects.find((p) => p.size === 'large') || featuredProjects[0]
+const sideProjects = featuredProjects.filter((p) => p.id !== mainProject.id).slice(0, 2)
 
 export default function Home() {
   return (
@@ -28,36 +33,31 @@ export default function Home() {
         <Reveal as="div" delay={240}>
           <SocialLinks />
         </Reveal>
+
+        <LogoSlider />
       </section>
 
       <section className="home-work">
         <Reveal as="div" className="home-work__header">
-          <h2 className="home-work__title">Selected work</h2>
-          <Link to="/work" className="home-work__link">See All Work</Link>
+          <div className="home-work__header-text">
+            <span className="home-work__eyebrow">Selected work</span>
+            <h2 className="home-work__title">Projets marquants</h2>
+          </div>
+          <Link to="/work" className="home-work__link">
+            Voir tous les projets
+            <span aria-hidden="true">→</span>
+          </Link>
         </Reveal>
 
-        <div className="home-work__grid">
-          {projects.slice(0, 2).map((project, index) => (
-            <Link
+        <div className="home-work__bento">
+          <ProjectCard project={mainProject} size="large" delay={0} />
+          {sideProjects.map((project, index) => (
+            <ProjectCard
               key={project.id}
-              to={`/work/${project.id}`}
-              className="home-work__card-link"
-              aria-label={`Voir le projet ${project.title}`}
-            >
-              <Reveal
-                as="article"
-                className="home-work__card"
-                delay={index * 100}
-              >
-                <div className="home-work__image">
-                  <img src={project.image} alt={project.title} loading="lazy" />
-                </div>
-                <div className="home-work__caption">
-                  <h3 className="home-work__name">{project.title}</h3>
-                  <p className="home-work__tags">{project.tags}</p>
-                </div>
-              </Reveal>
-            </Link>
+              project={project}
+              size="medium"
+              delay={(index + 1) * 100}
+            />
           ))}
         </div>
       </section>
@@ -107,5 +107,66 @@ export default function Home() {
         </Reveal>
       </footer>
     </Layout>
+  )
+}
+
+function ProjectCard({ project, size, delay }) {
+  const isLarge = size === 'large'
+  const techPreview = isLarge ? project.technologies.slice(0, 5) : []
+  const themeStyle = project.themeColor
+    ? { '--project-theme': project.themeColor }
+    : {}
+
+  return (
+    <Link
+      to={`/work/${project.id}`}
+      className={`home-work__card-link home-work__card-link--${size}`}
+      aria-label={`Voir le projet ${project.title}`}
+      style={themeStyle}
+    >
+      <Reveal
+        as="article"
+        className={`home-work__card home-work__card--${size}`}
+        animation="scale"
+        delay={delay}
+      >
+        {project.featured && (
+          <span className="home-work__badge">Projet phare</span>
+        )}
+        {project.theme && (
+          <span
+            className="home-work__theme"
+            style={{ background: project.themeColor, color: '#fff' }}
+          >
+            {project.theme}
+          </span>
+        )}
+        <div className="home-work__image">
+          <img src={project.image} alt={project.title} loading="lazy" />
+        </div>
+        <div className="home-work__caption">
+          <div className="home-work__meta">
+            <h3 className="home-work__name">{project.title}</h3>
+            <p className="home-work__tags">{project.tags} — {project.year}</p>
+          </div>
+          {isLarge && (
+            <>
+              <p className="home-work__desc">{project.description}</p>
+              {techPreview.length > 0 && (
+                <div className="home-work__techs">
+                  {techPreview.map((tech) => (
+                    <span key={tech} className="home-work__tech">{tech}</span>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+          <span className="home-work__cta">
+            Voir le projet
+            <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </Reveal>
+    </Link>
   )
 }
