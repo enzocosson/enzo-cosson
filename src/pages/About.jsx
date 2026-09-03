@@ -92,7 +92,7 @@ export default function About() {
                       className="timeline__initial"
                       style={{
                         backgroundColor: companyLogos[exp.id].bg,
-                        color: '#fff',
+                        color: '#ffffff',
                       }}
                       aria-label={companyLogos[exp.id].text}
                     >

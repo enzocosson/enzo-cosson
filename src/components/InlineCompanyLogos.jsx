@@ -1,33 +1,25 @@
-import './InlineCompanyLogos.css'
-
-const LOGOS = {
-  Capgemini: { src: '/images/capgemini.png', alt: 'Capgemini' },
-  'FDJ UNITED': { src: '/images/fdj-mini-logo.png', alt: 'FDJ UNITED' },
-}
+const HIGHLIGHTS = ['Capgemini', 'FDJ', 'DeepEdge']
 
 export default function InlineCompanyLogos({ text, className = '' }) {
-  const parts = text.split(/(Capgemini|FDJ UNITED)/g)
+  if (HIGHLIGHTS.length === 0) {
+    return <span className={className}>{text}</span>
+  }
+
+  const pattern = new RegExp(`(${HIGHLIGHTS.map(escapeRegExp).join('|')})`, 'g')
+  const parts = text.split(pattern)
 
   return (
     <span className={className}>
       {parts.map((part, index) => {
-        const logo = LOGOS[part]
-        if (logo) {
-          const isFdj = part === 'FDJ UNITED'
-          return (
-            <span key={index} className="inline-logo">
-              {part}
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className={`inline-logo__img ${isFdj ? 'inline-logo__img--fdj' : ''}`}
-                loading="lazy"
-              />
-            </span>
-          )
+        if (HIGHLIGHTS.includes(part)) {
+          return <strong key={index}>{part}</strong>
         }
         return <span key={index}>{part}</span>
       })}
     </span>
   )
+}
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }

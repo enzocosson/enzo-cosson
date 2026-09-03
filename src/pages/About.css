@@ -28,7 +28,7 @@
 .about__photo {
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: #f6f6f6;
+  background: var(--surface-raised);
   aspect-ratio: 3 / 4;
   margin-bottom: 24px;
 }

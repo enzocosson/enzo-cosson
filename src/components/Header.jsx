@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import ThemeToggle from './ThemeToggle'
 import './Header.css'
 
 const links = [
@@ -33,9 +34,19 @@ export default function Header() {
         ))}
       </nav>
 
-      <NavLink to="/contact" className="header__contact">
-        Contact
-      </NavLink>
+      <div className="header__actions">
+        <ThemeToggle />
+        <a
+          href="/Profile.pdf"
+          download
+          className="header__cv"
+        >
+          CV
+        </a>
+        <NavLink to="/contact" className="header__contact">
+          Contact
+        </NavLink>
+      </div>
     </header>
   )
 }

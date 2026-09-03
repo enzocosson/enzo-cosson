@@ -32,14 +32,14 @@
   line-height: 0.98;
   letter-spacing: -2px;
   font-weight: 500;
-  color: #000;
+  color: var(--text);
   margin: 0;
 }
 
 .project-detail__media {
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: #f6f6f6;
+  background: var(--surface-raised);
   margin-bottom: 64px;
 }
 
@@ -60,7 +60,7 @@
 .project-detail__section-title {
   font-size: 18px;
   font-weight: 500;
-  color: #000;
+  color: var(--text);
   margin: 0 0 20px;
 }
 
@@ -86,7 +86,7 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--text);
-  background: #f6f6f6;
+  background: var(--surface-raised);
 }
 
 .project-detail__actions {
@@ -105,7 +105,7 @@
   font-size: 15px;
   font-weight: 500;
   color: var(--text);
-  background: #f6f6f6;
+  background: var(--surface-raised);
   transition: background 0.2s ease, color 0.2s ease;
 }
 
