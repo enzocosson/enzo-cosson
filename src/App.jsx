@@ -6,6 +6,7 @@ import About from './pages/About'
 import Work from './pages/Work'
 import ProjectDetail from './pages/ProjectDetail'
 import Contact from './pages/Contact'
+import CV from './pages/CV'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/work" element={<Work />} />
             <Route path="/work/:projectId" element={<ProjectDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/cv" element={<CV />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

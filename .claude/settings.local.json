@@ -9,7 +9,18 @@
       "Bash(: *)",
       "Bash(identify /Users/enzocosson/Documents/trading/terminal/enzo-cosson/public/images/logo/logo-drugoptimal.png)",
       "mcp__ide__executeCode",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "Bash(python3 -c \"import playwright; print\\('playwright available'\\)\")",
+      "Bash(python3 -c \"import selenium; print\\('selenium available'\\)\")",
+      "Bash(python3 -c \"import weasyprint; print\\('weasyprint available'\\)\")",
+      "Bash(python3 -c \"import pdfkit; print\\('pdfkit available'\\)\")",
+      "Bash(python3 -c \"import fitz; print\\('pymupdf available'\\)\")",
+      "Bash(npx playwright *)",
+      "Bash(node screenshot_cv.js)",
+      "Bash(node screenshot_cv.mjs)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(npm uninstall *)"
     ]
   }
 }
