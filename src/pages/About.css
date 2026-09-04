@@ -113,11 +113,6 @@
   padding: 4px;
 }
 
-[data-theme="dark"] .timeline__logo[src*="experience/capgemini.png"],
-[data-theme="dark"] .timeline__logo[src*="experience/fdj.png"] {
-  filter: brightness(0) invert(1);
-}
-
 .timeline__initial {
   width: 100%;
   height: 100%;

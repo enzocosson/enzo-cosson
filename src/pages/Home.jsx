@@ -118,17 +118,17 @@ function ProjectCard({ project, size, delay }) {
     : {}
 
   return (
-    <Link
-      to={`/work/${project.id}`}
+    <Reveal
+      as="div"
       className={`home-work__card-link home-work__card-link--${size}`}
-      aria-label={`Voir le projet ${project.title}`}
-      style={themeStyle}
+      animation="scale"
+      delay={delay}
     >
-      <Reveal
-        as="article"
+      <Link
+        to={`/work/${project.id}`}
         className={`home-work__card home-work__card--${size}`}
-        animation="scale"
-        delay={delay}
+        aria-label={`Voir le projet ${project.title}`}
+        style={themeStyle}
       >
         {project.featured && (
           <span className="home-work__badge">Projet phare</span>
@@ -143,6 +143,18 @@ function ProjectCard({ project, size, delay }) {
         )}
         <div className="home-work__image">
           <img src={project.image} alt={project.title} loading="lazy" />
+          <div className="home-work__overlay">
+            {project.logo ? (
+              <img
+                src={project.logo}
+                alt={`Logo ${project.title}`}
+                className="home-work__logo"
+                loading="lazy"
+              />
+            ) : (
+              <span className="home-work__logo-text">{project.title}</span>
+            )}
+          </div>
         </div>
         <div className="home-work__caption">
           <div className="home-work__meta">
@@ -166,7 +178,7 @@ function ProjectCard({ project, size, delay }) {
             <span aria-hidden="true">→</span>
           </span>
         </div>
-      </Reveal>
-    </Link>
+      </Link>
+    </Reveal>
   )
 }

@@ -50,18 +50,18 @@ export default function Work() {
 
         <div className="work__grid">
           {filteredProjects.map((project, index) => (
-            <Link
+            <Reveal
               key={project.id}
-              to={`/work/${project.id}`}
+              as="div"
               className="work-card__link"
-              aria-label={`Voir le projet ${project.title}`}
-              style={project.themeColor ? { '--project-theme': project.themeColor } : {}}
+              animation="scale"
+              delay={index * 80}
             >
-              <Reveal
-                as="article"
+              <Link
+                to={`/work/${project.id}`}
                 className={`work-card ${project.featured ? 'work-card--featured' : ''}`}
-                animation="scale"
-                delay={index * 80}
+                aria-label={`Voir le projet ${project.title}`}
+                style={project.themeColor ? { '--project-theme': project.themeColor } : {}}
               >
                 {project.featured && (
                   <span className="work-card__badge">Featured</span>
@@ -76,6 +76,18 @@ export default function Work() {
                 )}
                 <div className="work-card__image">
                   <img src={project.image} alt={project.title} loading="lazy" />
+                  <div className="work-card__overlay">
+                    {project.logo ? (
+                      <img
+                        src={project.logo}
+                        alt={`Logo ${project.title}`}
+                        className="work-card__logo"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="work-card__logo-text">{project.title}</span>
+                    )}
+                  </div>
                 </div>
                 <div className="work-card__meta">
                   <div className="work-card__head">
@@ -88,8 +100,8 @@ export default function Work() {
                     <HighlightText text={project.description} />
                   </p>
                 </div>
-              </Reveal>
-            </Link>
+              </Link>
+            </Reveal>
           ))}
         </div>
       </section>

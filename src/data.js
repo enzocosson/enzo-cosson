@@ -36,6 +36,7 @@ export const projects = [
     ],
     link: "https://deepedge.fr",
     image: "/images/creations/deepedge-couverture.png",
+    logo: "/images/logo/logo-deepedge-svg.svg",
     featured: true,
     size: "large",
   },
@@ -50,6 +51,7 @@ export const projects = [
       "Contrat d'apprentissage chez Capgemini en mission chez FDJ UNITED, dans le cadre de mon Master Développement Full Stack (diplôme obtenu). Développement de l'interface « Compte Joueur » de la FDJ en React.js : nouvelles fonctionnalités, corrections de bugs, refactoring, optimisation du code et contributions back-end au sein d'une équipe agile.",
     technologies: ["React.js", "Redux", "Figma", "Directus", "GitLab", "Jira"],
     image: "/images/fdj-website.png",
+    logo: "/images/logo/Logo-fdjunited-2025.svg",
     featured: true,
     size: "medium",
   },
@@ -105,6 +107,7 @@ export const projects = [
       "IA / LLM",
     ],
     image: "/images/creations/drugoptimal-website.png",
+    logo: "/images/logo/logo-drugoptimal.png",
     link: "https://www.drugoptimal.com/",
   },
   {

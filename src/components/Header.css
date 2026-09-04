@@ -43,7 +43,9 @@
   font-size: 15px;
   font-weight: 500;
   color: var(--text);
-  transition: color 0.2s ease, background 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 .header__link:hover {
@@ -69,10 +71,15 @@
   font-size: 15px;
   font-weight: 500;
   flex-shrink: 0;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .header__cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--text);
   background: var(--surface);
   border: 1px solid var(--border);
@@ -82,6 +89,72 @@
   background: var(--surface-raised);
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.header__cv-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.header__cv-icon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.header__cv-wrapper:hover .header__cv-icon,
+.header__cv:hover .header__cv-icon {
+  transform: translateY(1px);
+}
+
+.header__cv-preview {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.header__cv-preview::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 24px;
+  width: 10px;
+  height: 10px;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.header__cv-preview img {
+  display: block;
+  width: auto;
+  height: 500px;
+  max-width: none;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.header__cv-wrapper:hover .header__cv-preview,
+.header__cv-wrapper:focus-within .header__cv-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .header__contact {
