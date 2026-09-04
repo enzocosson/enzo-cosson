@@ -20,7 +20,9 @@
       "Bash(node screenshot_cv.js)",
       "Bash(node screenshot_cv.mjs)",
       "Bash(pkill -f \"npm run dev\")",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(sed -i '' 's/--accent: #0070ad;/--accent: #ff5e00;/' /Users/enzocosson/Documents/trading/terminal/enzo-cosson/src/pages/CV.css)",
+      "Bash(grep -n \"--accent\" /Users/enzocosson/Documents/trading/terminal/enzo-cosson/src/pages/CV.css)"
     ]
   }
 }
