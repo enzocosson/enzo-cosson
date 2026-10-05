@@ -53,6 +53,30 @@ export default function ProjectDetail() {
           </Reveal>
         </div>
 
+        {project.gallery?.length > 0 && (
+          <Reveal as="div" className="project-detail__gallery-section" delay={80}>
+            <h2 className="project-detail__section-title">Features</h2>
+            <div className="project-detail__gallery">
+              {project.gallery.map((shot, index) => (
+                <Reveal
+                  key={shot.image}
+                  as="figure"
+                  className="project-detail__gallery-item"
+                  animation="scale"
+                  delay={(index % 2) * 80}
+                >
+                  <div className="project-detail__gallery-media">
+                    <img src={shot.image} alt={shot.label} loading="lazy" />
+                  </div>
+                  <figcaption className="project-detail__gallery-label">
+                    {shot.label}
+                  </figcaption>
+                </Reveal>
+              ))}
+            </div>
+          </Reveal>
+        )}
+
         <Reveal as="div" className="project-detail__actions" delay={160}>
           {project.link && (
             <a

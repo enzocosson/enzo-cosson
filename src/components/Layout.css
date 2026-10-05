@@ -3,6 +3,7 @@
   height: auto;
   min-height: 100svh;
   background: var(--surface);
+  overflow-x: clip;
 }
 
 .layout__main {
