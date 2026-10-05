@@ -38,7 +38,7 @@ export default function Header() {
         <ThemeToggle />
         <div className="header__cv-wrapper">
           <a
-            href="/cv/cv-enzo-cosson.pdf"
+            href="/cv/cv.pdf"
             download
             className="header__cv"
           >
@@ -62,7 +62,7 @@ export default function Header() {
           </a>
           <div className="header__cv-preview">
             <img
-              src="/cv/cv-enzo-cosson.png"
+              src="/cv/cv.png"
               alt="Aperçu du CV"
               loading="lazy"
             />
